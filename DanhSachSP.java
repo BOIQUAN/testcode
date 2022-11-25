@@ -90,8 +90,6 @@ public class DanhSachSP implements ChucNangDS, Serializable {
         String tensp = sc.nextLine();
         System.out.println("Nhap vao gia ban muon sua: ");
         Double giasp = Double.parseDouble(sc.nextLine());
-        System.out.printf("  %-30s%-30s%-30s%-30s%-30s\n", "[MaSP]", "[TenSP]", "[SoluongSP]", "[GiaSP]",
-                "[ThongtinSP]");
         for (int i = 0; i < dssp.length; i++) {
             if (dssp[i].getTensp().equalsIgnoreCase(tensp)) {
                 dssp[i].setGiasp(giasp);
@@ -106,14 +104,13 @@ public class DanhSachSP implements ChucNangDS, Serializable {
         String tensp = sc.nextLine();
         System.out.println("Nhap vao thong tin ban muon sua: ");
         String thongtinsp = sc.nextLine();
-        System.out.printf("  %-30s%-30s%-30s%-30s%-30s\n", "[MaSP]", "[TenSP]", "[SoluongSP]", "[GiaSP]",
-                "[ThongtinSP]");
         for (int i = 0; i < dssp.length; i++) {
             if (dssp[i].getTensp().equalsIgnoreCase(tensp)) {
                 dssp[i].setThongtinsp(thongtinsp);
-                dssp[i].Xuat();
+                // dssp[i].Xuat();
             }
         }
+        hienThi();
     }
 
 
